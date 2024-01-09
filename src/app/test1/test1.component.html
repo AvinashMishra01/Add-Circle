@@ -1,0 +1,36 @@
+
+<!-- <div class="container">
+    <div class="row">
+        <div class="col"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum magni obcaecati voluptate exercitationem, nulla asperiores illo culpa consequatur praesentium dolore.</div>
+    </div>
+    <br>
+    {{datac}}
+    <br>
+    <div class="row">
+        <div class="col">
+            <app-test2 [data]=datap  (dataEvent)="reciveData($event)"></app-test2>
+        </div>
+    </div>
+</div> -->
+
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <button class="btn btn-primary" (click)="addCircle()"> Add Circle</button>
+            <span> {{noOfCircle}}</span>
+        </div>
+    </div>
+    <div class="row" *ngFor="let circle of circles; let i = index">
+       
+         <div class="col">
+              <div class="circle" [class.active]="circle.active"  (click)="changeColor(i)"
+              > </div>
+         </div>
+         <br>
+
+        
+    </div>
+</div>
+
+
